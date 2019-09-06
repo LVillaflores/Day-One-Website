@@ -1,11 +1,46 @@
+*{
+	font-family: 'Lato', sans-serif;
+}
+
 header{
 	font-size: 26px;
 	}
+.Sticky_Header{
+ background: #ffff;
+ box-shadow: 1px 2px 4px grey;
+ padding: 10px;
+ 
 
-h1 {
+}
+.page_header {
 	font-size: 40px;
 	font-family: inherit;
 	}
+.large-image{
+	background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+   	background-image: url(Images/main.png); 
+   	background-size: 100% 100%;
+    height: 650px;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   background-size: cover;
+   -o-background-size: cover;
+}
+.Jumbo-Text{
+	padding-top: 155px;
+	padding-bottom: 275px;
+}
+.footer_copyright{
+	color: #878787;
+	font-size: 15px;
+	font-weight: 300;
+	text-align: left;
+	font-family: 'Open Sans', sans-serif;
+	text-transform: capitalize;
+}
 h3{
 	font-size: 20px;
 	font-weight: 100;
@@ -27,7 +62,7 @@ h6{
 
 p {
 	font-size: 14px;
-	text-align: center;
+	/*text-align: center;*/
 	color: gray;
 	}
 
@@ -35,13 +70,40 @@ footer {
 	color: gray;
 	}
 
-hr{
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  border-width: 1px;
-	width: 20%;
+.hnews{
+font-family: 'Open Sans', sans-serif;
+font-size: 30px;
+font-weight: 300;
+color: #585858;
+}
+.pnews{
+font-family: 'Open Sans', sans-serif;
+font-size: 15px;
+font-weight: 300;
+color: #838383;
+}
+.display-4{
+	color: #5a5a5a;
+	font-size: 80px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
+.sub{
+	color: #5a5a5a;
+	font-size: 40px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+}
 
-	}
+.short-border {
+	border: 0.5px solid #000;
+	margin: 20px auto;
+	width: 100px;
+}
+
+.latest-news {
+	text-align: center;
+}
 .card-columns{
 	@include media-breakpoint-only(lg)
 	{
@@ -54,34 +116,14 @@ hr{
 	display: inline-block;
 }
 
-
 .social-icon ul{
 	display:inline-block;
-}
-
-ul,ul li{
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-
-ul{
-margin-block-start: 1em;
-margin-block-end: 1em;
-margin-inline-start: 0px;
-margin-inline-end: 0px;
-padding-inline-start: 40px;
 }
 
 .container .row{
 
 	margin-right: -15px;
 	margin-left: -15px;
-}
-
-.ptb-20 {
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 .white-bg{
@@ -114,6 +156,11 @@ div{
 	display: block;
 }
 
+.ptb20{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
 .navbar-default{
 	background-color: inherit;
 
@@ -123,52 +170,44 @@ div{
 	position: absolute;
 	left:  50%;
 	transform: translateX(-50%);
-	}
-
-.dropdown-submenu {
+}
+.navbar .navbar-nav .nav-item a.nav-link{
+	display: block;
     position: relative;
-	}
+    color: #6c6c6c;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size:12px;
+}
 
-.dropdown-submenu>.dropdown-menu {
-    top: 0;
-    left: 100%;
-    margin-top: -6px;
-    margin-left: -1px;
-    -webkit-border-radius: 0 6px 6px 6px;
-    -moz-border-radius: 0 6px 6px;
-    border-radius: 0 6px 6px 6px;
-	}
+.navbar .navbar-nav .nav-item.active a.nav-link{
+	display: block;
+    position: relative;
+    color: #a4a4a4;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size:12px;
+    border-bottom: 1px #a4a4a4 solid;
+}
+.menu{
+	padding-top:120px;
+	padding-bottom: 20px;
+}
+.sort-link{
+	display: block;
+    position: relative;
+    color: #6c6c6c;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size:11px;
+}
+.sort-link.active{
 
-.dropdown-submenu:hover>.dropdown-menu {
-    display: block;
-	}
-
-.dropdown-submenu>a:after {
-    display: block;
-    content: " ";
-    float: right;
-    width: 0;
-    height: 0;
-    border-color: transparent;
-    border-style: solid;
-    border-width: 5px 0 5px 5px;
-    border-left-color: #ccc;
-    margin-top: 5px;
-    margin-right: -10px;
-	}
-
-.dropdown-submenu:hover>a:after {
-    border-left-color: #fff;
-	}
-
-.dropdown-submenu.pull-left {
-    float: none;
-	}
-
-.dropdown-submenu.pull-left>.dropdown-menu {
-    left: -100%;
-    margin-left: 10px;
-    -webkit-border-radius: 6px 0 6px 6px;
-    -moz-border-radius: 6px 0 6px 6px;
-    border-radius: 6px 0 6px 6px;
-	}
+	display: block;
+    position: relative;
+    color: #a4a4a4;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size:11px;
+    border-bottom: 1px #a4a4a4 solid;
+}
