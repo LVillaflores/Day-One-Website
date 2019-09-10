@@ -59,7 +59,7 @@
                 <a class="nav-link" href="#">Contact Us</a>
               </li>
             </ul>
-					<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+					<div class="g-signin2" data-onsuccess="onSignIn" onclick="display_button()" data-theme="dark"></div>
 						<script>
 						function onSignIn(googleUser) {
 						// Useful data for your client-side scripts:
@@ -76,7 +76,7 @@
 						console.log("ID Token: " + id_token);
 						}
 						</script>
-					<div class="sign-out"><button type="button" class="btn btn-danger" onclick="signOut()";>Sign out</button></div>
+					<div class="sign-out"><button id="out" type="button" class="btn btn-danger" style="display:none;" onclick="signOut()";>Sign out</button></div>
 						<script>
 						function signOut() {
 						var auth2 = gapi.auth2.getAuthInstance();
