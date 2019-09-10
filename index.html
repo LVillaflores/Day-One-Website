@@ -12,8 +12,9 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
 		<meta name="google-signin-scope" content="profile email">
-	  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+	  <meta name="google-signin-client_id" content="661047287510-22938i57ja33qpt96s99kvdjgjerrhos.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="jsfile.js"></script>
   </head>
 	<title>MinPo RegalTheme</title>
     
@@ -23,7 +24,7 @@
       </div> 
 
       <!-- NAVBAR SECTION -->
-     <header class="Sticky_Header sticky-top">
+    	<header class="Sticky_Header sticky-top">
       <nav class="navbar navbar-expand-lg navbar-light pt-4 pb-4">
         <div class="container">
         <a class="navbar-brand" href="index.html">
@@ -52,29 +53,40 @@
                <li class="nav-item">
                 <a class="nav-link" href="#">Contact Us</a>
               </li>
+          <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+          <div class="test"><button id="test" type="button" class="btn" onclick="display_button()";>Test</div>
+          <div class="sign-out"><button id="out" type="button" class="btn btn-danger" style="display:none;" onclick="hide_button()";>Sign out</button></div>
+          <div class="info"><button id="info" type="button" class="btn" style="display:none;" onclick="show_info()";>Info</button></div>
+					<div id="user-information">
+							<div>
+								<label>Name:</label>
+								<span></span>
+							</div>
+							<div>
+								<label>ID:</label>
+								<span></span>
+							</div>
+							<div>
+								<label>Gender:</label>
+								<span></span>
+							</div>
+							<div>
+								<label>Picture:</label>
+								<span></span>
+							</div>
+							<div>
+								<label>Email:</label>
+								<span></span>
+							</div>
+						</div>
             </ul>
           </div>
         </div>
       </nav>
     	</header>
       <!-- END OF NAVBAR SECTION -->
-		<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-  		<script>
-    	function onSignIn(googleUser) {
-      // Useful data for your client-side scripts:
-      var profile = googleUser.getBasicProfile();
-      console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-      console.log('Full Name: ' + profile.getName());
-      console.log('Given Name: ' + profile.getGivenName());
-      console.log('Family Name: ' + profile.getFamilyName());
-      console.log("Image URL: " + profile.getImageUrl());
-      console.log("Email: " + profile.getEmail());
-
-      // The ID token you need to pass to your backend:
-      var id_token = googleUser.getAuthResponse().id_token;
-      console.log("ID Token: " + id_token);
-    	}
-  		</script>
+		
+  		
       <!--Jumbtron-->
       <div class = "large-image">
         <div class="Jumbo-Text">
