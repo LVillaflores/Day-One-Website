@@ -177,11 +177,11 @@ div{
     color: #6c6c6c;
     font-weight: 600;
     text-transform: uppercase;
-    font-size:12px;s
+    font-size:12px;
 }
 
 .navbar .navbar-nav .nav-item.active a.nav-link{
-	display: block;
+		display: block;
     position: relative;
     color: #a4a4a4;
     font-weight: 600;
