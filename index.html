@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
 <meta name="google-signin-scope" content="profile email">
-<meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+<meta name="google-signin-client_id" content="661047287510-22938i57ja33qpt96s99kvdjgjerrhos.apps.googleusercontent.com">
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 
 
@@ -49,6 +49,15 @@
 						// The ID token you need to pass to your backend:
 						var id_token = googleUser.getAuthResponse().id_token;
 						console.log("ID Token: " + id_token);
+						}
+						</script>
+						<a href="#" onclick="signOut();">Sign out</a>
+						<script>
+						function signOut() {
+						var auth2 = gapi.auth2.getAuthInstance();
+						auth2.signOut().then(function () {
+						console.log('User signed out.');
+						});
 						}
 						</script>
            <ul class="nav navbar-nav navigation ml-auto clearfix">
