@@ -78,8 +78,22 @@ var id_token = googleUser.getAuthResponse().id_token;
 
 function signOut() {
 	var auth2 = gapi.auth2.getAuthInstance();
-	auth2.disconnect().then(function ()
-		{console.log('User signed out.');});
+	if(GoogleUser.is.SignedIn() == true){
+		document.getElementById("out").style.display="block";
+		document.getElementById("info").style.display="block";
+		auth2.disconnect().then(function ()
+			{console.log('User signed out.');});
+	}
+	else{
+		document.getElementById("out").style.display="none";
+		document.getElementById("info").style.display="none";
+	}
+}
+
+/*function SignOut(){
+ if(GoogleUser.is.SignedIn() == true)
+	document.getElementById("out").style.display="block";
+	document.getElementById("info").style.display="block";
 }
 
 function display_button(){
@@ -90,8 +104,32 @@ function display_button(){
 function hide_button(){
 	document.getElementById("out").style.display="none";
 	document.getElementById("info").style.display="none";
-}
+}*/
 
 function show_info(){
 	window.alert("Ala pa");
+}
+
+function topFunction() {
+  window.scroll({
+	  top: -2800, 
+	  left: 0, 
+	  behavior: 'smooth'
+	});
+
+	window.scrollBy({ 
+	  top: -2800,
+	  left: 0, 
+	  behavior: 'smooth' 
+	});
+}
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollUp.style.display = "block";
+  } else {
+    scrollUp.style.display = "none";
+  }
 }
