@@ -16,8 +16,9 @@
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script>
 	function display_button(){
-	document.getElementById("out").style.display="block";
-	}
+	document.getElementById("out").style.display="block";}
+	function hide_button(){
+	document.getElementById("out").style.display="none";}
 	</script>
 
 
@@ -77,7 +78,7 @@
 						console.log("ID Token: " + id_token);
 						}
 						</script>
-					<div class="sign-out"><button id="out" type="button" class="btn btn-danger" style="display:none;" onclick="signOut()";>Sign out</button></div>
+					<div class="sign-out"><button id="out" type="button" class="btn btn-danger" style="display:none;" onclick="signOut(); hide_button();";>Sign out</button></div>
 						<script>
 						function signOut() {
 						var auth2 = gapi.auth2.getAuthInstance();
